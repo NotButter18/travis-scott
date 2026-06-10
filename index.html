@@ -1,79 +1,479 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <title>Site not found &middot; GitHub Pages</title>
-    <style type="text/css" media="screen">
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
+<html lang="en">
 
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Travis Scott music profile for a Grade 9 presentation covering biography, cultural impact, innovations, and hit tracks with interactive media.">
+    <title>Travis Scott - Music Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .brand-blocks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 30px;
+        }
 
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
+        .brand-block-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
+        .stats-strip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
     </style>
-  </head>
-  <body>
+</head>
 
-    <div class="container">
+<body>
+    <header class="navbar">
+        <div class="logo">CACTUS<span>JACK</span></div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#bio">Biography</a>
+            <a href="#innovations">Innovations</a>
+            <a href="#discography">The Hits</a>
+            <a href="#legacy">Legacy</a>
+            <a href="#sources">Sources</a>
+        </nav>
+    </header>
 
-      <h1>404</h1>
-      <p><strong>There isn't a GitHub Pages site here.</strong></p>
+    <section id="hero" class="hero">
+        <div class="hero-content fade-in">
+            <h1 class="hero-title">TRAVIS<br>SCOTT</h1>
+            <p class="hero-subtitle">The Sound of Dark Trap</p>
+            <a href="#bio" class="btn">Explore the Astroworld</a>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
 
-      <p>
-        If you're trying to publish one,
-        <a href="https://help.github.com/pages/">read the full documentation</a>
-        to learn how to set up <strong>GitHub Pages</strong>
-        for your repository, organization, or user account.
-      </p>
+    <section id="bio" class="bio section fade-in">
+        <div class="container">
+            <h2 class="section-title">THE <span>ORIGINS</span></h2>
+            <p class="section-subtitle">From Missouri City to the Global Stage</p>
 
-      <div id="suggestions">
-        <a href="https://githubstatus.com">GitHub Status</a> &mdash;
-        <a href="https://twitter.com/githubstatus">@githubstatus</a>
-      </div>
+            <div class="bio-grid">
+                <div class="bio-image-wrapper">
+                    <img class="bio-image" src="travis-bio.jpg" alt="Travis Scott">
+                </div>
+                <div class="bio-details">
+                    <h3>Jacques Bermon Webster II</h3>
+                    <p>Born on April 30, 1991, in Houston, Texas, Jacques grew up in a middle-class suburb called
+                        Missouri City. When he was little, he lived with his grandmother, which he says kept him humble
+                        before he moved back in with his parents. After graduating from Elkins High School, he went to
+                        the University of Texas at San Antonio (UTSA). But college wasn't for him—he dropped out during
+                        his second year to chase his dream of making music, packing up and moving to New York and LA to
+                        catch his big break.</p>
 
-      <a href="/" class="logo logo-img-1x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=">
-      </a>
+                    <p>His stage name "Travis Scott" is actually a personal shoutout. "Travis" was named after his
+                        favorite uncle, and "Scott" comes from Kid Cudi, his biggest musical inspiration, whose real
+                        first name is Scott.</p>
 
-      <a href="/" class="logo logo-img-2x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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">
-      </a>
-    </div>
-  </body>
+                    <p>Outside of music, he was in a major relationship with Kylie Jenner from 2017 to 2023, and the two
+                        still raise their kids together. He also runs his own massive record label, <strong>Cactus Jack
+                            Records</strong>, where he signs and helps produce music for new artists.</p>
+
+                    <div class="bio-meta-grid">
+                        <div class="bio-meta-item">
+                            <h4>Born</h4>
+                            <p>Houston, Texas (1991)</p>
+                        </div>
+                        <div class="bio-meta-item">
+                            <h4>Heritage</h4>
+                            <p>African American</p>
+                        </div>
+                        <div class="bio-meta-item">
+                            <h4>Relationships</h4>
+                            <p>Kylie Jenner (2017–2023)</p>
+                        </div>
+                        <div class="bio-meta-item">
+                            <h4>Children</h4>
+                            <p>Stormi & Aire Webster</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="innovations" class="innovations section section-dark fade-in">
+        <div class="container">
+            <h2 class="section-title">ERA <span>INNOVATIONS</span></h2>
+            <p class="section-subtitle">How Travis Scott Changed Modern Hip-Hop</p>
+
+            <div class="innovations-grid">
+                <div class="innovation-card">
+                    <span class="innovation-num">01 / PRODUCTION</span>
+                    <h3>Dark Trap Beat Design</h3>
+                    <p>Travis shook up the music industry by taking heavy, loud 808 bass lines and mixing them with
+                        creepy, spacey synthesizer sounds. It creates this eerie, massive vibe that makes his songs feel
+                        like you are listening to a sci-fi movie soundtrack instead of a regular radio rap track.</p>
+                </div>
+
+                <div class="innovation-card">
+                    <span class="innovation-num">02 / VOCAL FX</span>
+                    <h3>Vocal FX as an Instrument</h3>
+                    <p>Instead of using auto-tune just to fix bad singing, Travis uses it to turn his voice into a
+                        completely different instrument. By layering pitch correction with lots of echoes, delays, and
+                        reverbs, his vocals blend straight into the background music like a keyboard or guitar line.</p>
+                </div>
+
+                <div class="innovation-card">
+                    <span class="innovation-num">03 / STRUCTURE</span>
+                    <h3>The Mid-Song Beat Switch</h3>
+                    <p>Travis popularized the crazy mid-song "beat switch" that everyone uses in modern rap now. By
+                        completely changing the speed, instruments, and vibe right in the middle of a track, his songs
+                        feel like a two-part movie with a real storyline instead of just playing the same loop over and
+                        over.</p>
+                </div>
+            </div>
+            <br>
+            <div class="brand-blocks">
+                <div class="brand-block-content">
+                    <h3 class="section-title">THE VIRTUAL <span>"ASTRONOMICAL"</span> ERA</h3>
+                    <p>During the 2020 lockdowns, Travis teamed up with Epic Games to throw a massive virtual concert
+                        inside <em>Fortnite</em>. This totally changed the game for the music business, proving that
+                        virtual concerts could actually work and opening the door for massive digital events in the
+                        future.</p>
+
+                    <div class="stats-strip">
+                        <div class="stat-card">
+                            <div class="stat-value">12.3M</div>
+                            <div class="stat-desc">Live Players at Once</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">27.7M</div>
+                            <div class="stat-desc">Unique Players Present</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">45.8M</div>
+                            <div class="stat-desc">Total Views Recorded</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="brand-block-content">
+                    <h3 class="section-title">CULTURAL <span>BRANDING</span> DOMINATION</h3>
+                    <p>Travis has taken over the business world, creating incredibly popular sneaker lines with Nike and
+                        becoming the very first artist since Michael Jordan in 1992 to get an official meal named after
+                        them on the McDonald's menu.</p>
+
+                    <div class="stats-strip">
+                        <div class="stat-card">
+                            <div class="stat-value">1st</div>
+                            <div class="stat-desc">Since Jordan (1992)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-desc">Merch Sold Out Instantly</div>
+                        </div>
+                        <br>
+                        <div class="stat-card2">
+                            <div class="stat-value"> 27B+</div>
+                            <div class="stat-desc">Total plays under Cactus Jack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="discography" class="discography section fade-in">
+        <div class="container">
+            <h2 class="section-title">THE <span>HITS</span></h2>
+            <p class="section-subtitle">Click a Track to Check Out the Song Details</p>
+
+            <div class="track-showroom">
+                <div class="track-navigator">
+                    <button class="track-btn active" data-track="sicko">
+                        <div class="track-btn-header">
+                            <span class="track-title">SICKO MODE</span>
+                            <span class="track-year">2018</span>
+                        </div>
+                        <p class="track-desc">A massive track from Astroworld with three crazy beat changes, featuring
+                            Drake.</p>
+                    </button>
+
+                    <button class="track-btn" data-track="90210">
+                        <div class="track-btn-header">
+                            <span class="track-title">90210</span>
+                            <span class="track-year">2015</span>
+                        </div>
+                        <p class="track-desc">A deep, two-part song off his Rodeo album that fans call a masterpiece.
+                        </p>
+                    </button>
+
+                    <button class="track-btn" data-track="goosebumps">
+                        <div class="track-btn-header">
+                            <span class="track-title">Goosebumps</span>
+                            <span class="track-year">2016</span>
+                        </div>
+                        <p class="track-desc">A catchy dark trap anthem featuring an incredible verse from Kendrick
+                            Lamar.</p>
+                    </button>
+
+                    <button class="track-btn" data-track="fein">
+                        <div class="track-btn-header">
+                            <span class="track-title">FE!N</span>
+                            <span class="track-year">2023</span>
+                        </div>
+                        <p class="track-desc">A high-energy moshpit track featuring Playboi Carti that goes crazy at
+                            live shows.</p>
+                    </button>
+                </div>
+
+                <div class="track-player-container">
+                    <div id="player-sicko" class="player-panel active">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/2xLMifQCjDGFmkHkpNLD9h?utm_source=generator&si=f3cd5a20d20e4fc0"
+                            width="100%" height="152" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+
+                        <div class="track-meta-data">
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Album</span>
+                                <span class="track-meta-value">Astroworld</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-row-label">Features</span>
+                                <span class="track-meta-value">Drake, Swae Lee, Big Hawk</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Chart Spot</span>
+                                <span class="track-meta-value">Hit #1 on the Billboard Hot 100</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Fun Fact</span>
+                                <span class="track-meta-value">The song shifts between 3 separate beats and took over 30
+                                    producers to put together.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="player-90210" class="player-panel">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/51EC3I1nQXpec4gDk0mQyP?utm_source=generator&si=ba7424ee27fe4fbb"
+                            width="100%" height="152" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+
+                        <div class="track-meta-data">
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Album</span>
+                                <span class="track-meta-value">Rodeo</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-row-label">Features</span>
+                                <span class="track-meta-value">Kacy Hill</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Chart Spot</span>
+                                <span class="track-meta-value">Hit #25 on Billboard Hot R&B/Hip-Hop</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Fun Fact</span>
+                                <span class="track-meta-value">The second half of the track completely swaps to a chill,
+                                    soulful guitar solo.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="player-goosebumps" class="player-panel">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/6gBFPUFcJLzWGx4lenP6h2?utm_source=generator&si=327e7372887e48f2"
+                            width="100%" height="152" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+
+                        <div class="track-meta-data">
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Album</span>
+                                <span class="track-meta-value">Birds in the Trap Sing McKnight</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-row-label">Features</span>
+                                <span class="track-meta-value">Kendrick Lamar</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Chart Spot</span>
+                                <span class="track-meta-value">Hit #3 on the Billboard Hot 100</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Fun Fact</span>
+                                <span class="track-meta-value">The track officially went Diamond in 2024 for selling
+                                    over 10 million copies.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="player-fein" class="player-panel">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/42VsgItocQwOQC3XWZ8JNA?utm_source=generator&si=8a08fa53187d4fbb"
+                            width="100%" height="152" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+
+                        <div class="track-meta-data">
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Album</span>
+                                <span class="track-meta-value">Utopia</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-row-label">Features</span>
+                                <span class="track-meta-value">Playboi Carti</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Chart Spot</span>
+                                <span class="track-meta-value">Hit #5 on the Billboard Hot 100</span>
+                            </div>
+                            <div class="track-meta-row">
+                                <span class="track-meta-label">Fun Fact</span>
+                                <span class="track-meta-value">Travis actually replayed this song 10 times in a row
+                                    during a concert at the Barclays Center because the crowd was hyped.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="legacy" class="legacy section section-dark fade-in">
+        <div class="container">
+            <h2 class="section-title">LEGACY & <span>OPINION</span></h2>
+            <p class="section-subtitle">Our Group's Take on Travis Scott</p>
+
+            <div class="legacy-grid" style="grid-template-columns: 1fr;">
+                <div class="opinion-card">
+                    <h3>Why Travis Scott Matters</h3>
+                    <p>In our opinion, Travis Scott's sound is unique because he doesn't just rap; he designs music. We
+                        think his best skill is taking different sounds, voice effects, and beats and layering them
+                        together like a movie director. Even if you aren't a big fan of rap music, you have to respect
+                        how he changed the business of music by merging gaming, fashion, and food into one giant
+                        culture. We chose him because his concerts are legendary for their energy, and his music shows
+                        how trap music can be creative and experimental instead of just repetitive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sources" class="sources section fade-in">
+        <div class="container">
+            <h2 class="section-title">BIBLIOGRAPHY & <span>SOURCES</span></h2>
+            <p class="section-subtitle">Where We Found Our Research Data</p>
+
+            <div class="sources-list">
+                <div class="source-item">
+                    <h4>Life Story & Bio Facts</h4>
+                    <a href="https://www.britannica.com/biography/Travis-Scott" target="_blank">Encyclopaedia
+                        Britannica</a>
+                    <p>Used to check facts on his childhood in Houston, dropping out of college, and setting up Cactus
+                        Jack Records.</p>
+                </div>
+
+                <div class="source-item">
+                    <h4>Fortnite Show Stats</h4>
+                    <a href="https://www.pcgamer.com/travis-scotts-fortnite-show-reportedly-earned-him-dollar20-million/"
+                        target="_blank">PC Gamer Financial Report</a>
+                    <p>Used to grab the official player counts and concurrent viewer numbers during his virtual live
+                        stream event.</p>
+                </div>
+
+                <div class="source-item">
+                    <h4>McDonald's Collaboration Details</h4>
+                    <a href="https://corporate.mcdonalds.com/corpmcd/our-stories/article/travis-scott-embark.html"
+                        target="_blank">McDonald's Press Room</a>
+                    <p>Used to verify the history of his fast food meal deal and his sneaker partnership releases.</p>
+                </div>
+
+                <div class="source-item">
+                    <h4>Music Reviews & Production Info</h4>
+                    <a href="http://www.anydecentmusic.com/review/9471/Travis-Scott-Astroworld.aspx"
+                        target="_blank">AnyDecentMusic Reviews Archive</a>
+                    <p>Used to check out comments from music critics regarding his beat changes, sound mixing, and synth
+                        work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>CACTUS<span>JACK</span></h2>
+            <p>Grade 9 Music Presentation • AMU1O3.1</p>
+            <p>Created by Nimaan, Jay, and Aidan</p>
+            <p>© 2026 Educational Presentation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const subtitle = document.querySelector('.hero-subtitle');
+            if (subtitle) {
+                const text = subtitle.textContent;
+                subtitle.textContent = '';
+                let i = 0;
+                let lastTime = 0;
+                function typeWriter(time) {
+                    if (time - lastTime > 70) {
+                        subtitle.textContent += text.charAt(i);
+                        i++;
+                        lastTime = time;
+                    }
+                    if (i < text.length) {
+                        requestAnimationFrame(typeWriter);
+                    }
+                }
+                requestAnimationFrame(typeWriter);
+            }
+
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            const trackButtons = document.querySelectorAll('.track-btn');
+            const playerPanels = document.querySelectorAll('.player-panel');
+
+            trackButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    trackButtons.forEach(btn => btn.classList.remove('active'));
+                    playerPanels.forEach(panel => panel.classList.remove('active'));
+
+                    button.classList.add('active');
+
+                    const trackId = button.getAttribute('data-track');
+                    const targetPanel = document.getElementById(`player-${trackId}`);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
 </html>
